@@ -134,6 +134,15 @@
     animation: scroll 30s linear infinite;
   }
 
+  /* 3D perspective for animations */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
   /* Reduce motion for accessibility */
   @media (prefers-reduced-motion: reduce) {
     *,
