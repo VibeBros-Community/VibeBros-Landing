@@ -1,6 +1,6 @@
 "use client";
 
-import { } from "lucide-react";
+import { memo } from "react";
 
 // Mock user data for social proof
 const users = [
@@ -13,7 +13,7 @@ const users = [
     { name: "Tom Wilson", role: "Streamer" },
 ];
 
-export function CommunitySection() {
+export const CommunitySection = memo(function CommunitySection() {
     return (
         <section id="community" className="py-24 overflow-hidden border-y border-ink-black-800 bg-ink-black-950/50">
             <div className="container mb-12 text-center">
@@ -26,7 +26,7 @@ export function CommunitySection() {
                 {/* Row 1: Left to Right */}
                 <div className="flex w-max animate-scroll gap-8 hover:[animation-play-state:paused]">
                     {[...users, ...users, ...users].map((user, i) => (
-                        <div key={i} className="flex items-center gap-3 rounded-full border border-ink-black-800 bg-ink-black-900/50 px-6 py-3 backdrop-blur-sm hover:border-brick-ember-500/30 transition-colors">
+                        <div key={i} className="flex items-center gap-3 rounded-full border border-ink-black-800 bg-ink-black-900/50 px-6 py-3 backdrop-blur-sm hover:border-brick-ember-500/30 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-brick-ember-500/10 will-change-transform">
                             <div className="h-10 w-10 rounded-full bg-gradient-to-br from-brick-ember-500 to-baby-blue-500" />
                             <div>
                                 <p className="text-sm font-semibold text-ink-black-50">{user.name}</p>
@@ -39,7 +39,7 @@ export function CommunitySection() {
                 {/* Row 2: Right to Left (Reverse) */}
                 <div className="flex w-max animate-scroll gap-8 hover:[animation-play-state:paused]" style={{ animationDirection: "reverse" }}>
                     {[...users, ...users, ...users].map((user, i) => (
-                        <div key={i} className="flex items-center gap-3 rounded-full border border-ink-black-800 bg-ink-black-900/50 px-6 py-3 backdrop-blur-sm hover:border-baby-blue-500/30 transition-colors">
+                        <div key={i} className="flex items-center gap-3 rounded-full border border-ink-black-800 bg-ink-black-900/50 px-6 py-3 backdrop-blur-sm hover:border-baby-blue-500/30 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-baby-blue-500/10 will-change-transform">
                             <div className="h-10 w-10 rounded-full bg-gradient-to-br from-baby-blue-400 to-pale-sky-500" />
                             <div>
                                 <p className="text-sm font-semibold text-ink-black-50">{user.name}</p>
@@ -55,4 +55,4 @@ export function CommunitySection() {
             </div>
         </section>
     );
-}
+});

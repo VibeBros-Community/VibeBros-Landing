@@ -1,10 +1,17 @@
 "use client";
 
+import { memo } from "react";
+import dynamic from "next/dynamic";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import HeroLogo from "@/components/scene/HeroLogo";
 
-export function HeroSection() {
+// Lazy load heavy 3D logo
+const HeroLogo = dynamic(() => import("@/components/scene/HeroLogo"), {
+    ssr: false,
+    loading: () => <div className="absolute inset-0" />
+});
+
+export const HeroSection = memo(function HeroSection() {
     return (
         <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden pt-20 md:pt-0">
             {/* 3D Logo (Local to Hero) */}
@@ -13,9 +20,9 @@ export function HeroSection() {
             <div className="container relative z-10 grid md:grid-cols-2 gap-12 items-center pointer-events-none">
                 <div className="flex flex-col items-start text-left pointer-events-auto mt-24">
                     <motion.h1
-                        initial={{ opacity: 0, filter: "blur(10px)", scale: 0.95 }}
-                        animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
-                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
                         className="text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] text-white mb-6"
                     >
                         LEVEL UP <br />
@@ -24,9 +31,9 @@ export function HeroSection() {
                     </motion.h1>
 
                     <motion.p
-                        initial={{ opacity: 0, filter: "blur(10px)", scale: 0.95 }}
-                        animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
-                        transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
                         className="max-w-lg text-lg text-baltic-blue-200 mb-8 leading-relaxed"
                     >
                         Join an elite community of gamers, developers, and creators. 
@@ -34,9 +41,9 @@ export function HeroSection() {
                     </motion.p>
 
                     <motion.div
-                        initial={{ opacity: 0, filter: "blur(10px)", scale: 0.95 }}
-                        animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
-                        transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
                         className="flex flex-wrap gap-4"
                     >
                         <Button 
@@ -56,4 +63,4 @@ export function HeroSection() {
             </div>
         </section>
     );
-}
+});

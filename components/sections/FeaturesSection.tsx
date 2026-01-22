@@ -1,5 +1,6 @@
 "use client";
 
+import { memo } from "react";
 import { Zap, Shield, Globe, Cpu, Users, Layers, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -49,7 +50,7 @@ const features = [
     },
 ];
 
-export function FeaturesSection() {
+export const FeaturesSection = memo(function FeaturesSection() {
     return (
         <section id="features" className="container py-24 sm:py-32">
             <div className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
@@ -70,13 +71,13 @@ export function FeaturesSection() {
                     <motion.div
                         key={index}
                         className={cn(
-                            "group relative overflow-hidden rounded-3xl border border-baltic-blue-800 p-8 transition-all hover:border-cerulean-500/50",
+                            "group relative overflow-hidden rounded-3xl border border-baltic-blue-800 p-8 transition-all hover:border-cerulean-500/50 will-change-transform",
                             feature.className
                         )}
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.4, delay: index * 0.1 }}
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-100px" }}
+                        transition={{ duration: 0.5, delay: index * 0.05, ease: [0.22, 1, 0.36, 1] }}
                     >
                         <div className={cn(
                             "absolute inset-0 bg-gradient-to-br opacity-50 transition-opacity group-hover:opacity-100",
@@ -101,4 +102,4 @@ export function FeaturesSection() {
             </div>
         </section>
     );
-}
+});

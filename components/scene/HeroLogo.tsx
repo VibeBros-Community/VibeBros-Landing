@@ -1,11 +1,11 @@
 "use client";
 
-import { useRef, useMemo, useState, useEffect } from "react";
+import { useRef, useMemo, useState, memo } from "react";
 import { Canvas, useFrame, ThreeEvent } from "@react-three/fiber";
 import { PerspectiveCamera, useTexture } from "@react-three/drei";
 import * as THREE from "three";
 
-function VolumetricLogo({ url, layers = 32, depth = 0.5, ...props }: any) {
+const VolumetricLogo = memo(function VolumetricLogo({ url, layers = 24, depth = 0.5, ...props }: any) {
   const group = useRef<THREE.Group>(null);
   const texture = useTexture(url) as THREE.Texture;
   
@@ -130,23 +130,30 @@ function VolumetricLogo({ url, layers = 32, depth = 0.5, ...props }: any) {
         </group>
     </group>
   );
-}
+});
 
 export default function HeroLogo() {
   return (
     <div className="absolute inset-0 z-0 h-full w-full">
-      <Canvas>
+      <Canvas
+        dpr={[1, 1.5]}
+        performance={{ min: 0.5 }}
+        gl={{
+          antialias: false,
+          powerPreference: "high-performance"
+        }}
+      >
         <PerspectiveCamera makeDefault position={[0, 0, 10]} />
-        
+
         {/* Local Lighting for the Logo */}
         <ambientLight intensity={0.8} />
         <spotLight position={[10, 10, 10]} angle={0.3} penumbra={1} intensity={2} color="#d8e7f3" />
-        
+
         {/* The Logo Only */}
-        <VolumetricLogo 
-            url="/logo.png" 
-            position={[3, 0, 0]} 
-            scale={1.5} 
+        <VolumetricLogo
+            url="/logo.png"
+            position={[3, 0, 0]}
+            scale={1.5}
             rotation={[0, -0.3, 0]}
             depth={0.4}
           />
