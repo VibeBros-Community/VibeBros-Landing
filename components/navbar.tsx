@@ -18,7 +18,7 @@ export function Navbar() {
     }, []);
 
     return (
-        <div className="fixed top-10 left-0 right-0 z-50 flex justify-center px-4 transition-all duration-300">
+        <div className="fixed top-10 left-0 right-0 z-[9999] flex justify-center px-4 transition-all duration-300">
             <nav className={`flex h-14 items-center justify-between gap-4 rounded-full border border-baltic-blue-700 px-4 backdrop-blur-md shadow-2xl w-full max-w-4xl supports-[backdrop-filter]:bg-baltic-blue-900/60 transition-all duration-300 will-change-transform ${
                 isScrolled ? 'bg-baltic-blue-900/80 shadow-baltic-blue-950/60' : 'bg-baltic-blue-900/60 shadow-baltic-blue-950/40'
             }`}>
