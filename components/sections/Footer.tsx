@@ -1,59 +1,178 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Sparkles } from "lucide-react";
+import { Github, Twitter, Youtube, MessageCircle, Mail, Heart } from "lucide-react";
 
 export function Footer() {
+    const currentYear = new Date().getFullYear();
+
     return (
-        <footer className="border-t border-ink-black-800 bg-background pt-16 pb-8">
-            <div className="container">
-                <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-                    <div className="space-y-4">
-                        <div className="flex items-center gap-2">
-                            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-brick-ember-500/10 text-brick-ember-500 ring-1 ring-brick-ember-500/20">
-                                <Sparkles className="h-4 w-4" />
+        <footer className="relative border-t border-baltic-blue-800 bg-gradient-to-b from-transparent to-baltic-blue-950/30 pt-20 pb-8 overflow-hidden">
+            {/* Gradient blur orbs */}
+            <div className="absolute top-0 left-1/4 w-96 h-96 bg-cerulean-500/10 rounded-full blur-[128px]" />
+            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-yale-blue-500/10 rounded-full blur-[128px]" />
+
+            <div className="container relative z-10">
+                <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-5 mb-12">
+                    {/* Brand Section */}
+                    <div className="lg:col-span-2 space-y-6">
+                        <div className="flex items-center gap-3">
+                            <div className="relative h-12 w-12 transition-transform duration-300 hover:scale-110 will-change-transform">
+                                <Image
+                                    src="/logo-no-text.png"
+                                    alt="VibeBros Logo"
+                                    fill
+                                    className="object-contain"
+                                    sizes="48px"
+                                />
                             </div>
-                            <span className="text-lg font-bold">VibeBros</span>
+                            <span className="text-2xl font-black text-white">VibeBros</span>
                         </div>
-                        <p className="text-sm text-ink-black-300">
-                            Building the future of digital communities. Connected, verified, and amplified.
+                        <p className="text-baltic-blue-300 max-w-sm leading-relaxed">
+                            A community of developers, designers, and creators building the future together.
+                            Code with passion, ship with purpose.
                         </p>
+
+                        {/* Social Links */}
+                        <div className="flex gap-3">
+                            <a
+                                href="https://discord.gg/p6UWRMrj"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="p-3 rounded-full bg-baltic-blue-800/50 text-baltic-blue-300 hover:bg-cerulean-500/20 hover:text-cerulean-400 transition-all duration-200 hover:scale-110 will-change-transform"
+                                aria-label="Discord"
+                            >
+                                <MessageCircle className="h-5 w-5" />
+                            </a>
+                            <a
+                                href="https://github.com/vibebros"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="p-3 rounded-full bg-baltic-blue-800/50 text-baltic-blue-300 hover:bg-cerulean-500/20 hover:text-cerulean-400 transition-all duration-200 hover:scale-110 will-change-transform"
+                                aria-label="GitHub"
+                            >
+                                <Github className="h-5 w-5" />
+                            </a>
+                            <a
+                                href="https://twitter.com/vibebros"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="p-3 rounded-full bg-baltic-blue-800/50 text-baltic-blue-300 hover:bg-cerulean-500/20 hover:text-cerulean-400 transition-all duration-200 hover:scale-110 will-change-transform"
+                                aria-label="Twitter"
+                            >
+                                <Twitter className="h-5 w-5" />
+                            </a>
+                            <a
+                                href="https://youtube.com/@vibebros"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="p-3 rounded-full bg-baltic-blue-800/50 text-baltic-blue-300 hover:bg-cerulean-500/20 hover:text-cerulean-400 transition-all duration-200 hover:scale-110 will-change-transform"
+                                aria-label="YouTube"
+                            >
+                                <Youtube className="h-5 w-5" />
+                            </a>
+                        </div>
                     </div>
 
+                    {/* Quick Links */}
                     <div>
-                        <h3 className="mb-4 text-sm font-semibold text-ink-black-100">Product</h3>
-                        <ul className="space-y-2 text-sm text-ink-black-300">
-                            <li><a href="#" className="hover:text-brick-ember-300 transition-colors">Features</a></li>
-                            <li><a href="#" className="hover:text-brick-ember-300 transition-colors">Pricing</a></li>
-                            <li><a href="#" className="hover:text-brick-ember-300 transition-colors">Showcase</a></li>
+                        <h3 className="mb-4 text-sm font-bold text-white uppercase tracking-wider">Community</h3>
+                        <ul className="space-y-3 text-sm">
+                            <li>
+                                <Link href="#about" className="text-baltic-blue-300 hover:text-cerulean-400 transition-colors duration-200">
+                                    About Us
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="#projects" className="text-baltic-blue-300 hover:text-cerulean-400 transition-colors duration-200">
+                                    Projects
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="#events" className="text-baltic-blue-300 hover:text-cerulean-400 transition-colors duration-200">
+                                    Events
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="#team" className="text-baltic-blue-300 hover:text-cerulean-400 transition-colors duration-200">
+                                    Team
+                                </Link>
+                            </li>
                         </ul>
                     </div>
 
+                    {/* Resources */}
                     <div>
-                        <h3 className="mb-4 text-sm font-semibold text-ink-black-100">Company</h3>
-                        <ul className="space-y-2 text-sm text-ink-black-300">
-                            <li><a href="#" className="hover:text-brick-ember-300 transition-colors">About</a></li>
-                            <li><a href="#" className="hover:text-brick-ember-300 transition-colors">Blog</a></li>
-                            <li><a href="#" className="hover:text-brick-ember-300 transition-colors">Careers</a></li>
+                        <h3 className="mb-4 text-sm font-bold text-white uppercase tracking-wider">Resources</h3>
+                        <ul className="space-y-3 text-sm">
+                            <li>
+                                <a href="https://github.com/vibebros" target="_blank" rel="noopener noreferrer" className="text-baltic-blue-300 hover:text-cerulean-400 transition-colors duration-200">
+                                    GitHub
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" className="text-baltic-blue-300 hover:text-cerulean-400 transition-colors duration-200">
+                                    Documentation
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" className="text-baltic-blue-300 hover:text-cerulean-400 transition-colors duration-200">
+                                    Blog
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" className="text-baltic-blue-300 hover:text-cerulean-400 transition-colors duration-200">
+                                    Guidelines
+                                </a>
+                            </li>
                         </ul>
                     </div>
 
+                    {/* Newsletter */}
                     <div>
-                        <h3 className="mb-4 text-sm font-semibold text-ink-black-100">Subscribe</h3>
-                        <p className="mb-4 text-sm text-ink-black-300">
-                            Get the latest updates and resources.
+                        <h3 className="mb-4 text-sm font-bold text-white uppercase tracking-wider">Stay Updated</h3>
+                        <p className="mb-4 text-sm text-baltic-blue-300">
+                            Get the latest from VibeBros.
                         </p>
-                        <div className="flex gap-2">
+                        <div className="flex flex-col gap-2">
                             <input
                                 type="email"
-                                placeholder="Enter your email"
-                                className="flex h-10 w-full rounded-md border border-ink-black-800 bg-ink-black-900 px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-ink-black-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brick-ember-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all"
+                                placeholder="your@email.com"
+                                className="flex h-10 w-full rounded-lg border border-baltic-blue-800 bg-baltic-blue-900/50 px-4 py-2 text-sm text-white placeholder:text-baltic-blue-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cerulean-500 focus-visible:border-cerulean-500 transition-all backdrop-blur-sm"
                             />
-                            <Button className="bg-brick-ember-500 hover:bg-brick-ember-600 text-white shadow-lg shadow-brick-ember-500/20">Sub</Button>
+                            <Button className="w-full bg-cerulean-500 hover:bg-cerulean-600 text-white shadow-lg shadow-cerulean-500/20">
+                                <Mail className="h-4 w-4 mr-2" />
+                                Subscribe
+                            </Button>
                         </div>
                     </div>
                 </div>
 
-                <div className="mt-16 border-t border-ink-black-800 pt-8 text-center text-sm text-ink-black-400">
-                    © {new Date().getFullYear()} VibeBros Inc. All rights reserved.
+                {/* Bottom Bar */}
+                <div className="pt-8 border-t border-baltic-blue-800">
+                    <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+                        <p className="text-sm text-baltic-blue-400">
+                            © {currentYear} VibeBros. All rights reserved.
+                        </p>
+                        <div className="flex items-center gap-1 text-sm text-baltic-blue-400">
+                            <span>Made with</span>
+                            <Heart className="h-4 w-4 text-cerulean-400 fill-current" />
+                            <span>by the VibeBros community</span>
+                        </div>
+                        <div className="flex gap-6 text-sm">
+                            <a href="#" className="text-baltic-blue-400 hover:text-cerulean-400 transition-colors">
+                                Privacy
+                            </a>
+                            <a href="#" className="text-baltic-blue-400 hover:text-cerulean-400 transition-colors">
+                                Terms
+                            </a>
+                            <a href="#" className="text-baltic-blue-400 hover:text-cerulean-400 transition-colors">
+                                Code of Conduct
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </footer>
