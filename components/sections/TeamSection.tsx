@@ -13,7 +13,7 @@ const team = [
         avatar: "W",
         gradient: "from-cerulean-400 to-yale-blue-500",
         socials: {
-            github: "https://github.com",
+            github: "https://github.com/VibeBros-Community",
             twitter: "https://twitter.com",
             linkedin: "https://linkedin.com",
         },
@@ -25,7 +25,7 @@ const team = [
         avatar: "JP",
         gradient: "from-yale-blue-500 to-cerulean-400",
         socials: {
-            github: "https://github.com",
+            github: "https://github.com/VibeBros-Community",
             twitter: "https://twitter.com",
             linkedin: "https://linkedin.com",
         },
@@ -37,7 +37,7 @@ const team = [
         avatar: "M",
         gradient: "from-cerulean-500 to-baltic-blue-400",
         socials: {
-            github: "https://github.com",
+            github: "https://github.com/VibeBros-Community",
             twitter: "https://twitter.com",
         },
     },
@@ -48,7 +48,7 @@ const team = [
         avatar: "J35",
         gradient: "from-baltic-blue-400 to-cerulean-500",
         socials: {
-            github: "https://github.com",
+            github: "https://github.com/VibeBros-Community",
             linkedin: "https://linkedin.com",
         },
     },

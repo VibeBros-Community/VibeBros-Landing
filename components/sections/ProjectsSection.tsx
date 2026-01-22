@@ -13,7 +13,7 @@ const projects = [
         tags: ["Next.js", "WebSockets", "Tailwind"],
         stars: 234,
         live: "https://vibechat.dev",
-        github: "https://github.com/vibebros/vibechat",
+        github: "https://github.com/VibeBros-Community/vibechat",
         gradient: "from-cerulean-500/20 to-yale-blue-500/20",
     },
     {
@@ -21,7 +21,7 @@ const projects = [
         description: "VS Code extension that plays curated music based on your coding language and energy level.",
         tags: ["TypeScript", "VS Code API", "ML"],
         stars: 1200,
-        github: "https://github.com/vibebros/codeflow",
+        github: "https://github.com/VibeBros-Community/codeflow",
         gradient: "from-yale-blue-500/20 to-cerulean-500/20",
     },
     {
@@ -30,7 +30,7 @@ const projects = [
         tags: ["React", "WebRTC", "Monaco"],
         stars: 567,
         live: "https://buildspace.vibebros.dev",
-        github: "https://github.com/vibebros/buildspace",
+        github: "https://github.com/VibeBros-Community/buildspace",
         gradient: "from-cerulean-400/20 to-baltic-blue-500/20",
     },
 ];

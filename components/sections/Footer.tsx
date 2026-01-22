@@ -47,7 +47,7 @@ export function Footer() {
                                 <MessageCircle className="h-5 w-5" />
                             </a>
                             <a
-                                href="https://github.com/vibebros"
+                                href="https://github.com/VibeBros-Community"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="p-3 rounded-full bg-baltic-blue-800/50 text-baltic-blue-300 hover:bg-cerulean-500/20 hover:text-cerulean-400 transition-all duration-200 hover:scale-110 will-change-transform"
@@ -108,7 +108,7 @@ export function Footer() {
                         <h3 className="mb-4 text-sm font-bold text-white uppercase tracking-wider">Resources</h3>
                         <ul className="space-y-3 text-sm">
                             <li>
-                                <a href="https://github.com/vibebros" target="_blank" rel="noopener noreferrer" className="text-baltic-blue-300 hover:text-cerulean-400 transition-colors duration-200">
+                                <a href="https://github.com/VibeBros-Community" target="_blank" rel="noopener noreferrer" className="text-baltic-blue-300 hover:text-cerulean-400 transition-colors duration-200">
                                     GitHub
                                 </a>
                             </li>
