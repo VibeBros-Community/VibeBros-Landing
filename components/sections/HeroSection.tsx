@@ -37,7 +37,7 @@ const titleVariants = {
         rotateX: 0,
         transition: {
             duration: 0.8,
-            ease: [0.22, 1, 0.36, 1],
+            ease: [0.22, 1, 0.36, 1] as any as any,
         },
     },
 };
@@ -51,7 +51,7 @@ const wordVariants = {
         transition: {
             duration: 0.6,
             delay: i * 0.1,
-            ease: [0.22, 1, 0.36, 1],
+            ease: [0.22, 1, 0.36, 1] as any as any,
         },
     }),
 };
@@ -116,7 +116,7 @@ export const HeroSection = memo(function HeroSection() {
                     <motion.p
                         initial={{ opacity: 0, x: -30 }}
                         animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                        transition={{ duration: 0.8, delay: 0.6, ease: [0.22, 1, 0.36, 1] as any as any }}
                         className="max-w-lg text-lg text-baltic-blue-200 mb-8 leading-relaxed"
                     >
                         Join an elite community of gamers, developers, and creators.
@@ -126,7 +126,7 @@ export const HeroSection = memo(function HeroSection() {
                     <motion.div
                         initial={{ opacity: 0, scale: 0.8, y: 20 }}
                         animate={{ opacity: 1, scale: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.8, ease: [0.34, 1.56, 0.64, 1] }}
+                        transition={{ duration: 0.6, delay: 0.8, ease: [0.34, 1.56, 0.64, 1] as any as any }}
                         className="flex flex-wrap gap-4"
                     >
                         <motion.div

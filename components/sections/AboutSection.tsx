@@ -41,7 +41,7 @@ export const AboutSection = memo(function AboutSection() {
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] as any }}
                     >
                         <h2 className="text-5xl md:text-6xl font-black tracking-tighter text-white mb-6">
                             WHAT IS <br />
@@ -66,7 +66,7 @@ export const AboutSection = memo(function AboutSection() {
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] as any }}
                     >
                         {features.map((feature, index) => (
                             <motion.div
@@ -75,7 +75,7 @@ export const AboutSection = memo(function AboutSection() {
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, margin: "-50px" }}
-                                transition={{ duration: 0.5, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
+                                transition={{ duration: 0.5, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] as any }}
                             >
                                 <div className="absolute inset-0 bg-gradient-to-br from-cerulean-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl" />
                                 <div className="relative z-10">
