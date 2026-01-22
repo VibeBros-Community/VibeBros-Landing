@@ -37,7 +37,7 @@ const projects = [
 
 export const ProjectsSection = memo(function ProjectsSection() {
     return (
-        <section id="projects" className="py-24 sm:py-32 border-t border-baltic-blue-800">
+        <section id="projects" className="py-24 sm:py-32">
             <div className="container">
                 <div className="mb-16 text-center">
                     <motion.h2
