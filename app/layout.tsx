@@ -8,6 +8,10 @@ const pixelify = Pixelify_Sans({ subsets: ["latin"], variable: "--font-sans" });
 export const metadata: Metadata = {
   title: "VibeBros - The Creator Economy Platform",
   description: "Join the next generation of digital creators and innovators.",
+  icons: {
+    icon: '/logo-no-text.png',
+    apple: '/logo-no-text.png',
+  },
 };
 
 export default function RootLayout({
