@@ -42,18 +42,6 @@ const titleVariants = {
     },
 };
 
-const glowVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-        opacity: [0, 1, 0.8],
-        scale: [0.8, 1.2, 1],
-        transition: {
-            duration: 1.2,
-            ease: "easeOut",
-        },
-    },
-};
-
 const wordVariants = {
     hidden: { opacity: 0, x: -30, rotateY: -20 },
     visible: (i: number) => ({
@@ -73,14 +61,6 @@ export const HeroSection = memo(function HeroSection() {
         <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden pt-20 md:pt-0">
             {/* 3D Logo (Local to Hero) */}
             <HeroLogo />
-
-            {/* Animated glow effect */}
-            <motion.div
-                variants={glowVariants}
-                initial="hidden"
-                animate="visible"
-                className="absolute top-1/2 left-1/4 w-[600px] h-[600px] bg-cerulean-500/20 rounded-full blur-[120px] pointer-events-none"
-            />
 
             <motion.div
                 className="container relative z-10 grid md:grid-cols-2 gap-12 items-center pointer-events-none"

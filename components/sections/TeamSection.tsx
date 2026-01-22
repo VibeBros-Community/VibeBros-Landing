@@ -7,10 +7,10 @@ import { Github, Twitter, Linkedin } from "lucide-react";
 
 const team = [
     {
-        name: "Alex Rivers",
+        name: "Willian",
         role: "Founder & Lead Vibe Architect",
         bio: "Full-stack developer with a passion for building communities. 10+ years coding to lo-fi beats.",
-        avatar: "AR",
+        avatar: "W",
         gradient: "from-cerulean-400 to-yale-blue-500",
         socials: {
             github: "https://github.com",
@@ -19,10 +19,10 @@ const team = [
         },
     },
     {
-        name: "Maya Chen",
+        name: "Jesse Pinkman",
         role: "Community Lead & Designer",
         bio: "UX designer turned community builder. Creating spaces where developers feel at home.",
-        avatar: "MC",
+        avatar: "JP",
         gradient: "from-yale-blue-500 to-cerulean-400",
         socials: {
             github: "https://github.com",
@@ -31,10 +31,10 @@ const team = [
         },
     },
     {
-        name: "Jordan Park",
+        name: "Max",
         role: "Head of Content & Streams",
         bio: "Live coding enthusiast and educator. Making programming accessible and fun for everyone.",
-        avatar: "JP",
+        avatar: "M",
         gradient: "from-cerulean-500 to-baltic-blue-400",
         socials: {
             github: "https://github.com",
@@ -42,10 +42,10 @@ const team = [
         },
     },
     {
-        name: "Sam Torres",
+        name: "J35",
         role: "DevOps & Infrastructure",
         bio: "Keeps everything running smoothly. Cloud architecture expert and automation wizard.",
-        avatar: "ST",
+        avatar: "J35",
         gradient: "from-baltic-blue-400 to-cerulean-500",
         socials: {
             github: "https://github.com",
