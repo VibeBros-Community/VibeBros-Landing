@@ -63,7 +63,7 @@ export const HeroSection = memo(function HeroSection() {
             <HeroLogo />
 
             <motion.div
-                className="container relative z-10 grid md:grid-cols-2 gap-12 items-center pointer-events-none"
+                className="container relative z-[100] grid md:grid-cols-2 gap-12 items-center pointer-events-none"
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
