@@ -62,15 +62,15 @@ export const HeroSection = memo(function HeroSection() {
             {/* 3D Logo (Local to Hero) */}
             <HeroLogo />
 
-            <div className="container relative z-50 pointer-events-none">
-                <motion.div
-                    className="flex flex-col items-start text-left pointer-events-auto max-w-3xl backdrop-blur-sm bg-black/20 p-8 rounded-3xl border border-cerulean-500/20"
-                    variants={containerVariants}
-                    initial="hidden"
-                    animate="visible"
-                >
+            <motion.div
+                className="container relative z-10 grid md:grid-cols-2 gap-12 items-center pointer-events-none"
+                variants={containerVariants}
+                initial="hidden"
+                animate="visible"
+            >
+                <div className="flex flex-col items-start text-left pointer-events-auto mt-24">
                     <div className="mb-6 overflow-hidden perspective-1000">
-                        <motion.div variants={titleVariants} style={{ textShadow: '0 2px 20px rgba(0,0,0,0.8)' }}>
+                        <motion.div variants={titleVariants}>
                             <motion.span
                                 custom={0}
                                 variants={wordVariants}
@@ -89,7 +89,6 @@ export const HeroSection = memo(function HeroSection() {
                         <motion.div
                             variants={titleVariants}
                             transition={{ delay: 0.2 }}
-                            style={{ textShadow: '0 2px 20px rgba(0,0,0,0.8)' }}
                         >
                             <motion.span
                                 custom={2}
@@ -103,7 +102,6 @@ export const HeroSection = memo(function HeroSection() {
                         <motion.div
                             variants={titleVariants}
                             transition={{ delay: 0.3 }}
-                            style={{ textShadow: '0 2px 20px rgba(0,0,0,0.8)' }}
                         >
                             <motion.span
                                 custom={3}
@@ -151,8 +149,8 @@ export const HeroSection = memo(function HeroSection() {
                             </Button>
                         </motion.div>
                     </motion.div>
-                </motion.div>
-            </div>
+                </div>
+            </motion.div>
         </section>
     );
 });
