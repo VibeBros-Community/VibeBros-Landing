@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useMemo, useState, memo } from "react";
+import { useRef, useMemo, useState, memo, useEffect } from "react";
 import { Canvas, useFrame, ThreeEvent } from "@react-three/fiber";
 import { PerspectiveCamera, useTexture } from "@react-three/drei";
 import * as THREE from "three";
@@ -133,6 +133,18 @@ const VolumetricLogo = memo(function VolumetricLogo({ url, layers = 24, depth = 
 });
 
 export default function HeroLogo() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
     <div className="absolute inset-0 z-0 h-full w-full pointer-events-none">
       <Canvas
@@ -149,11 +161,11 @@ export default function HeroLogo() {
         <ambientLight intensity={0.8} />
         <spotLight position={[10, 10, 10]} angle={0.3} penumbra={1} intensity={2} color="#d8e7f3" />
 
-        {/* The Logo Only */}
+        {/* The Logo - Responsive positioning */}
         <VolumetricLogo
             url="/logo.png"
-            position={[3, 0, 0]}
-            scale={1.5}
+            position={isMobile ? [0, 2, 0] : [3, 0, 0]}
+            scale={isMobile ? 0.8 : 1.5}
             rotation={[0, -0.3, 0]}
             depth={0.4}
           />
