@@ -63,25 +63,25 @@ export const HeroSection = memo(function HeroSection() {
             <HeroLogo />
 
             <motion.div
-                className="container relative z-[100] pointer-events-none px-4 md:px-6"
+                className="container relative z-[100] pointer-events-none px-4 md:px-6 flex items-center justify-center md:justify-start min-h-screen"
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
             >
-                <div className="flex flex-col items-start text-left pointer-events-auto max-w-3xl pt-24 md:pt-0">
-                    <div className="mb-6 overflow-hidden perspective-1000">
+                <div className="flex flex-col items-center md:items-start text-center md:text-left pointer-events-auto max-w-3xl w-full">
+                    <div className="mb-8 md:mb-6 overflow-hidden perspective-1000">
                         <motion.div variants={titleVariants}>
                             <motion.span
                                 custom={0}
                                 variants={wordVariants}
-                                className="inline-block text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black tracking-tighter leading-[0.9] text-white mr-2 md:mr-4"
+                                className="inline-block text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.85] md:leading-[0.9] text-white mr-3 md:mr-4"
                             >
                                 LEVEL
                             </motion.span>
                             <motion.span
                                 custom={1}
                                 variants={wordVariants}
-                                className="inline-block text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black tracking-tighter leading-[0.9] text-white"
+                                className="inline-block text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.85] md:leading-[0.9] text-white"
                             >
                                 UP
                             </motion.span>
@@ -89,11 +89,12 @@ export const HeroSection = memo(function HeroSection() {
                         <motion.div
                             variants={titleVariants}
                             transition={{ delay: 0.2 }}
+                            className="my-1 md:my-0"
                         >
                             <motion.span
                                 custom={2}
                                 variants={wordVariants}
-                                className="inline-block text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black tracking-tighter leading-[0.9] text-transparent bg-clip-text bg-gradient-to-r from-cerulean-400 to-yale-blue-500 animate-pulse"
+                                className="inline-block text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.85] md:leading-[0.9] text-transparent bg-clip-text bg-gradient-to-r from-cerulean-400 to-yale-blue-500 animate-pulse"
                                 style={{ animationDuration: '3s' }}
                             >
                                 YOUR
@@ -106,7 +107,7 @@ export const HeroSection = memo(function HeroSection() {
                             <motion.span
                                 custom={3}
                                 variants={wordVariants}
-                                className="inline-block text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black tracking-tighter leading-[0.9] text-white"
+                                className="inline-block text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.85] md:leading-[0.9] text-white"
                             >
                                 NETWORK
                             </motion.span>
@@ -117,7 +118,7 @@ export const HeroSection = memo(function HeroSection() {
                         initial={{ opacity: 0, x: -30 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.6, ease: [0.22, 1, 0.36, 1] as any }}
-                        className="max-w-lg text-sm sm:text-base md:text-lg text-baltic-blue-200 mb-6 md:mb-8 leading-relaxed"
+                        className="max-w-lg text-base sm:text-lg md:text-xl text-baltic-blue-200 mb-8 leading-relaxed"
                     >
                         Join an elite community of gamers, developers, and creators.
                         Experience the VibeBros ecosystem today.
