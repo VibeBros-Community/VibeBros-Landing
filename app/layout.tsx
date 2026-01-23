@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Pixelify_Sans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { PWAInstaller } from "@/components/PWAInstaller";
 
 const pixelify = Pixelify_Sans({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -109,6 +110,7 @@ export default function RootLayout({
         "min-h-screen bg-background font-sans antialiased",
         pixelify.variable
       )}>
+        <PWAInstaller />
         {children}
       </body>
     </html>
