@@ -68,7 +68,7 @@ export const HeroSection = memo(function HeroSection() {
                 initial="hidden"
                 animate="visible"
             >
-                <div className="flex flex-col items-center md:items-start text-center md:text-left pointer-events-auto max-w-3xl w-full">
+                <div className="flex flex-col items-center md:items-start text-center md:text-left pointer-events-auto max-w-3xl w-full mt-28 md:mt-0">
                     <div className="mb-8 md:mb-6 overflow-hidden perspective-1000">
                         <motion.div variants={titleVariants}>
                             <motion.span
@@ -128,16 +128,15 @@ export const HeroSection = memo(function HeroSection() {
                         initial={{ opacity: 0, scale: 0.8, y: 20 }}
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.8, ease: [0.34, 1.56, 0.64, 1] as any }}
-                        className="flex flex-wrap gap-4 w-full sm:w-auto"
+                        className="flex flex-wrap gap-4 justify-center md:justify-start"
                     >
                         <motion.div
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="w-full sm:w-auto"
                         >
                             <Button
                                 size="lg"
-                                className="h-12 sm:h-14 rounded-full px-6 sm:px-10 w-full sm:w-auto sm:min-w-[240px] text-sm sm:text-base bg-[#5865F2] hover:bg-[#4752C4] text-white border-0 shadow-lg shadow-[#5865F2]/20 transition-all hover:shadow-xl hover:shadow-[#5865F2]/40 relative overflow-hidden group"
+                                className="h-12 sm:h-14 rounded-full px-8 sm:px-10 text-sm sm:text-base bg-[#5865F2] hover:bg-[#4752C4] text-white border-0 shadow-lg shadow-[#5865F2]/20 transition-all hover:shadow-xl hover:shadow-[#5865F2]/40 relative overflow-hidden group"
                                 asChild
                             >
                                 <a href="https://discord.gg/p6UWRMrj" target="_blank" rel="noopener noreferrer">
