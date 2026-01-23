@@ -68,7 +68,7 @@ export const HeroSection = memo(function HeroSection() {
                 initial="hidden"
                 animate="visible"
             >
-                <div className="flex flex-col items-center md:items-start text-center md:text-left pointer-events-auto max-w-3xl w-full mt-28 md:mt-16">
+                <div className="flex flex-col items-center md:items-start text-center md:text-left pointer-events-auto max-w-3xl w-full mt-28 md:mt-24">
                     <div className="mb-8 md:mb-6 overflow-hidden perspective-1000">
                         <motion.div variants={titleVariants}>
                             <motion.span
