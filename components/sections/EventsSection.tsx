@@ -2,9 +2,7 @@
 
 import { memo } from "react";
 import { motion } from "framer-motion";
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Calendar, Clock, Users, Video } from "lucide-react";
+import { CyberTimeline } from "@/components/ui/cyber-timeline";
 
 const events = [
     {
@@ -65,73 +63,7 @@ export const EventsSection = memo(function EventsSection() {
                     </motion.div>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {events.map((event, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-100px" }}
-                            transition={{ duration: 0.5, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] as any }}
-                        >
-                            <Card className="group relative h-full p-6 border-baltic-blue-800 bg-baltic-blue-900/50 backdrop-blur-sm hover:border-cerulean-500/50 overflow-hidden">
-                                {/* Status badge */}
-                                <div className="absolute top-4 right-4">
-                                    <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                                        event.status === 'upcoming'
-                                            ? 'bg-cerulean-500/20 text-cerulean-400 border border-cerulean-500/30'
-                                            : 'bg-yale-blue-500/20 text-yale-blue-400 border border-yale-blue-500/30'
-                                    }`}>
-                                        {event.status === 'upcoming' ? 'Upcoming' : 'Recurring'}
-                                    </span>
-                                </div>
-
-                                {/* Gradient background */}
-                                <div className={`absolute inset-0 bg-gradient-to-br ${event.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
-
-                                <div className="relative z-10 flex flex-col h-full">
-                                    {/* Type */}
-                                    <div className="flex items-center gap-2 text-cerulean-400 mb-3">
-                                        <Video className="h-4 w-4" />
-                                        <span className="text-sm font-medium">{event.type}</span>
-                                    </div>
-
-                                    {/* Title */}
-                                    <h3 className="text-2xl font-bold text-white mb-4">{event.title}</h3>
-
-                                    {/* Description */}
-                                    <p className="text-baltic-blue-300 mb-6 flex-grow">{event.description}</p>
-
-                                    {/* Event details */}
-                                    <div className="space-y-2 mb-6">
-                                        <div className="flex items-center gap-2 text-sm text-baltic-blue-200">
-                                            <Calendar className="h-4 w-4 text-cerulean-400" />
-                                            {event.date}
-                                        </div>
-                                        <div className="flex items-center gap-2 text-sm text-baltic-blue-200">
-                                            <Clock className="h-4 w-4 text-cerulean-400" />
-                                            {event.time}
-                                        </div>
-                                        <div className="flex items-center gap-2 text-sm text-baltic-blue-200">
-                                            <Users className="h-4 w-4 text-cerulean-400" />
-                                            {event.participants} participants
-                                        </div>
-                                    </div>
-
-                                    {/* CTA Button */}
-                                    <Button
-                                        className="w-full bg-cerulean-500 hover:bg-cerulean-600 text-white"
-                                        asChild
-                                    >
-                                        <a href="https://discord.gg/p6UWRMrj" target="_blank" rel="noopener noreferrer">
-                                            Register Now
-                                        </a>
-                                    </Button>
-                                </div>
-                            </Card>
-                        </motion.div>
-                    ))}
-                </div>
+                <CyberTimeline events={events} />
             </div>
         </section>
     );

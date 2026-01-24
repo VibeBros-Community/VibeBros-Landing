@@ -2,8 +2,7 @@
 
 import { memo } from "react";
 import { motion } from "framer-motion";
-import { Card } from "@/components/ui/card";
-import { Github, Twitter, Linkedin } from "lucide-react";
+import { AccordionTeam } from "@/components/ui/accordion-team";
 
 const team = [
     {
@@ -78,70 +77,18 @@ export const TeamSection = memo(function TeamSection() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] as any }}
                     >
-                        The passionate builders behind VibeBros, dedicated to creating the ultimate coding community.
+                        Built by the community, for the community. Check out what we've been vibing on.
                     </motion.p>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {team.map((member, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-100px" }}
-                            transition={{ duration: 0.5, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] as any }}
-                        >
-                            <Card className="group relative h-full p-6 border-baltic-blue-800 bg-baltic-blue-900/50 backdrop-blur-sm hover:border-cerulean-500/50 text-center">
-                                {/* Avatar */}
-                                <div className="relative mx-auto mb-4 w-24 h-24">
-                                    <div className={`absolute inset-0 bg-gradient-to-br ${member.gradient} rounded-full opacity-20 group-hover:opacity-30 transition-opacity blur-xl`} />
-                                    <div className={`relative flex items-center justify-center w-24 h-24 rounded-full bg-gradient-to-br ${member.gradient} text-white text-2xl font-bold transition-transform duration-300 group-hover:scale-110 will-change-transform`}>
-                                        {member.avatar}
-                                    </div>
-                                </div>
-
-                                {/* Info */}
-                                <h3 className="text-xl font-bold text-white mb-1">{member.name}</h3>
-                                <p className="text-sm text-cerulean-400 mb-3 font-medium">{member.role}</p>
-                                <p className="text-sm text-baltic-blue-300 mb-6">{member.bio}</p>
-
-                                {/* Social Links */}
-                                <div className="flex justify-center gap-3">
-                                    {member.socials.github && (
-                                        <a
-                                            href={member.socials.github}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="p-2 rounded-full bg-baltic-blue-800/50 text-baltic-blue-300 hover:bg-cerulean-500/20 hover:text-cerulean-400 transition-all duration-200 hover:scale-110 will-change-transform"
-                                        >
-                                            <Github className="h-4 w-4" />
-                                        </a>
-                                    )}
-                                    {member.socials.twitter && (
-                                        <a
-                                            href={member.socials.twitter}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="p-2 rounded-full bg-baltic-blue-800/50 text-baltic-blue-300 hover:bg-cerulean-500/20 hover:text-cerulean-400 transition-all duration-200 hover:scale-110 will-change-transform"
-                                        >
-                                            <Twitter className="h-4 w-4" />
-                                        </a>
-                                    )}
-                                    {member.socials.linkedin && (
-                                        <a
-                                            href={member.socials.linkedin}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="p-2 rounded-full bg-baltic-blue-800/50 text-baltic-blue-300 hover:bg-cerulean-500/20 hover:text-cerulean-400 transition-all duration-200 hover:scale-110 will-change-transform"
-                                        >
-                                            <Linkedin className="h-4 w-4" />
-                                        </a>
-                                    )}
-                                </div>
-                            </Card>
-                        </motion.div>
-                    ))}
-                </div>
+                <motion.div
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.6 }}
+                >
+                    <AccordionTeam members={team} />
+                </motion.div>
             </div>
         </section>
     );

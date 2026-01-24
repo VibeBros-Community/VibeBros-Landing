@@ -130,8 +130,29 @@
     }
   }
 
+  @keyframes scanline {
+    0% {
+      top: 0%;
+      opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+      top: 100%;
+      opacity: 0;
+    }
+  }
+
   .animate-scroll {
     animation: scroll 30s linear infinite;
+  }
+
+  .animate-scanline {
+    animation: scanline 3s linear infinite;
   }
 
   /* 3D perspective for animations */
