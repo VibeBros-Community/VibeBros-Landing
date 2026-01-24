@@ -41,8 +41,10 @@ export function Navbar() {
     return (
         <>
             <div className="fixed top-10 left-0 right-0 z-[9999] flex justify-center px-4 transition-all duration-300">
-                <nav className={`flex h-14 items-center justify-between gap-4 rounded-full border border-baltic-blue-700 px-4 backdrop-blur-md shadow-2xl w-full max-w-4xl supports-[backdrop-filter]:bg-baltic-blue-900/60 transition-all duration-300 will-change-transform ${
-                    isScrolled ? 'bg-baltic-blue-900/80 shadow-baltic-blue-950/60' : 'bg-baltic-blue-900/60 shadow-baltic-blue-950/40'
+                <nav className={`flex h-14 items-center justify-between gap-4 rounded-full border px-4 w-full max-w-4xl transition-all duration-300 will-change-transform ${
+                    isScrolled 
+                        ? 'bg-baltic-blue-900/80 border-baltic-blue-700 backdrop-blur-md shadow-2xl shadow-baltic-blue-950/60 scale-100' 
+                        : 'bg-baltic-blue-900/20 border-baltic-blue-700/30 backdrop-blur-sm shadow-none scale-95'
                 }`}>
                     <Link href="/" className="flex items-center gap-3 -mt-1">
                         <div className="relative h-12 w-12 transition-transform duration-300 hover:scale-110 will-change-transform">
