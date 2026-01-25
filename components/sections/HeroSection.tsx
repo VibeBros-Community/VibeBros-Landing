@@ -69,7 +69,7 @@ export const HeroSection = memo(function HeroSection() {
                 animate="visible"
             >
                 <div className="flex flex-col items-center md:items-start text-center md:text-left pointer-events-auto max-w-3xl w-full mt-28 md:mt-12">
-                    <div className="mb-8 md:mb-6 overflow-hidden perspective-1000">
+                    <h1 className="mb-8 md:mb-6 overflow-hidden perspective-1000">
                         <motion.div variants={titleVariants}>
                             <motion.span
                                 custom={0}
@@ -112,7 +112,7 @@ export const HeroSection = memo(function HeroSection() {
                                 NETWORK
                             </motion.span>
                         </motion.div>
-                    </div>
+                    </h1>
 
                     <motion.p
                         initial={{ opacity: 0, x: -30 }}

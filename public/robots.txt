@@ -1,9 +1,23 @@
-# *
+# All bots
 User-agent: *
 Allow: /
+Allow: /api/
+
+# Crawl delay (ms)
+Crawl-delay: 1
+
+# Request rate (pages per seconds)
+Request-rate: 1/1s
 
 # Host
 Host: https://vibebros.dev
 
 # Sitemaps
 Sitemap: https://vibebros.dev/sitemap.xml
+
+# Disallow bad bots (optional - uncomment if needed)
+# User-agent: AhrefsBot
+# Disallow: /
+
+# User-agent: SemrushBot
+# Disallow: /
