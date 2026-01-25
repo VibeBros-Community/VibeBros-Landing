@@ -15,6 +15,13 @@ const events = [
         description: "48-hour coding marathon. Build anything, win prizes, and vibe with the community.",
         status: "upcoming",
         gradient: "from-cerulean-500/20 to-yale-blue-500/20",
+        location: "Discord Stage",
+        requirements: ["Laptop", "Discord Account", "Good Vibes"],
+        agenda: [
+            { time: "9:00 AM", item: "Opening Ceremony" },
+            { time: "10:00 AM", item: "Team Formation" },
+            { time: "12:00 PM", item: "Hacking Begins" }
+        ]
     },
     {
         title: "Vibe Coding Session",
@@ -25,6 +32,13 @@ const events = [
         description: "Weekly live coding sessions with lo-fi beats and good vibes. All skill levels welcome.",
         status: "recurring",
         gradient: "from-yale-blue-500/20 to-cerulean-400/20",
+        location: "Twitch / Discord",
+        requirements: ["Chill Playlist", "Snacks"],
+        agenda: [
+            { time: "7:00 PM", item: "Intro & Chat" },
+            { time: "7:30 PM", item: "Live Coding" },
+            { time: "9:30 PM", item: "Q&A / Show & Tell" }
+        ]
     },
     {
         title: "Web3 Workshop",
@@ -35,6 +49,13 @@ const events = [
         description: "Deep dive into Web3 development. Build your first dApp with hands-on guidance.",
         status: "upcoming",
         gradient: "from-cerulean-400/20 to-baltic-blue-500/20",
+        location: "Google Meet",
+        requirements: ["Node.js Installed", "Metamask Wallet"],
+        agenda: [
+            { time: "6:00 PM", item: "Blockchain Basics" },
+            { time: "6:45 PM", item: "Smart Contract Dev" },
+            { time: "7:45 PM", item: "Deployment" }
+        ]
     },
 ];
 
