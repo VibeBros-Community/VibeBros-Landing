@@ -19,7 +19,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: "VibeBros - Level Up Your Network",
-  description: "Join an elite community of gamers, developers, and creators. Experience the VibeBros ecosystem today.",
+  description: "Join VibeBros: A thriving community of 250+ developers, gamers, and creators. Weekly coding sessions, hackathons, Web3 workshops, and 24/7 Discord support. Level up your network today!",
   applicationName: "VibeBros",
   metadataBase: new URL(siteUrl),
   appleWebApp: {
@@ -33,6 +33,10 @@ export const metadata: Metadata = {
   manifest: '/manifest.json',
   icons: {
     icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/icon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/icon-48x48.png', sizes: '48x48', type: 'image/png' },
       { url: '/icon-192x192.png', sizes: '192x192', type: 'image/png' },
       { url: '/icon-512x512.png', sizes: '512x512', type: 'image/png' },
     ],
@@ -47,7 +51,7 @@ export const metadata: Metadata = {
     url: siteUrl,
     siteName: 'VibeBros',
     title: 'VibeBros - Level Up Your Network',
-    description: 'Join an elite community of gamers, developers, and creators. Experience the VibeBros ecosystem today.',
+    description: 'Join VibeBros: A thriving community of 250+ developers, gamers, and creators. Weekly coding sessions, hackathons, Web3 workshops, and 24/7 Discord support. Level up your network today!',
     images: [
       {
         url: `${siteUrl}/landing-og.png`,
@@ -62,19 +66,27 @@ export const metadata: Metadata = {
     site: '@vibebros',
     creator: '@vibebros',
     title: 'VibeBros - Level Up Your Network',
-    description: 'Join an elite community of gamers, developers, and creators. Experience the VibeBros ecosystem today.',
+    description: 'Join VibeBros: A thriving community of 250+ developers, gamers, and creators. Weekly coding sessions, hackathons, Web3 workshops, and 24/7 Discord support. Level up your network today!',
     images: [`${siteUrl}/landing-og.png`],
   },
   keywords: [
     'VibeBros',
-    'community',
+    'developer community',
+    'tech community',
+    'programming community',
+    'coding community',
     'developers',
     'creators',
     'gaming',
     'coding',
     'web3',
+    'web3 development',
     'discord',
+    'discord community for developers',
     'hackathon',
+    'coding bootcamp',
+    'coding workshops',
+    'live coding sessions',
     'vibe coding',
   ],
   authors: [{ name: 'VibeBros Community' }],
@@ -101,6 +113,18 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* SEO Meta Tags */}
+        <link rel="canonical" href={siteUrl} />
+        <meta name="author" content="VibeBros Community" />
+
+        {/* Favicons - Multiple sizes for better compatibility */}
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/icon-16x16.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="48x48" href="/icon-48x48.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/icon-152x152.png" />
+        <link rel="apple-touch-icon" sizes="192x192" href="/icon-192x192.png" />
+
         {/* Preload Critical Resources */}
         <link rel="preload" href="/logo-no-text.png" as="image" type="image/png" />
         <link rel="preload" href="/landing-og.png" as="image" type="image/png" />
@@ -108,12 +132,12 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://discord.gg" crossOrigin="anonymous" />
 
+        {/* PWA Configuration */}
         <link rel="manifest" href="/manifest.json" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="VibeBros" />
-        <link rel="apple-touch-icon" href="/icon-192x192.png" />
 
         {/* JSON-LD Organization Schema */}
         <script

@@ -70,9 +70,9 @@ export const AccordionTeam = ({ members }: AccordionTeamProps) => {
                                 isActive ? "opacity-0 pointer-events-none" : "opacity-100"
                             )}>
                                 <div className="w-[1px] h-12 bg-gradient-to-b from-transparent via-cerulean-500 to-transparent" />
-                                <h3 className="text-lg font-bold text-baltic-blue-300 tracking-widest uppercase [writing-mode:vertical-rl] rotate-180 whitespace-nowrap">
+                                <div className="text-lg font-bold text-baltic-blue-300 tracking-widest uppercase [writing-mode:vertical-rl] rotate-180 whitespace-nowrap" aria-label={member.name}>
                                     {member.name}
-                                </h3>
+                                </div>
                                  <div className="w-[1px] h-12 bg-gradient-to-b from-cerulean-500 via-transparent to-transparent" />
                             </div>
 
