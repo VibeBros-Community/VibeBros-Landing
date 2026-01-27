@@ -4,6 +4,7 @@ import { Footer } from "@/components/sections/Footer";
 import StarfieldBackground from "@/components/scene/StarfieldBackground";
 import { BlogList } from "@/components/blog/BlogList";
 import { BackButton } from "@/components/ui/back-button";
+import { getAllBlogPostSummaries } from "@/lib/blog-posts";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://vibebros.dev';
 
@@ -33,7 +34,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default function BlogPage() {
+export default async function BlogPage() {
+  const posts = await getAllBlogPostSummaries();
+
   return (
     <main className="min-h-screen bg-transparent text-foreground selection:bg-primary/20 relative">
       <div className="fixed inset-0 z-0">
@@ -51,12 +54,12 @@ export default function BlogPage() {
                   BLOG
                 </span>
               </h1>
-              <p className="text-xl text-baltic-blue-200">
-                Latest news, tutorials, and insights from the VibeBros community.
-                Learn from our experiences and level up your development skills.
-              </p>
-            </div>
-            <BlogList />
+            <p className="text-xl text-baltic-blue-200">
+              Latest news, tutorials, and insights from the VibeBros community.
+              Learn from our experiences and level up your development skills.
+            </p>
+          </div>
+            <BlogList posts={posts} />
           </div>
         </div>
         <Footer />

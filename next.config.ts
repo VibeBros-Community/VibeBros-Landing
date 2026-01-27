@@ -1,3 +1,4 @@
+import path from "path";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
@@ -19,6 +20,11 @@ const nextConfig: NextConfig = {
   // Enable experimental features for better performance
   experimental: {
     optimizePackageImports: ['framer-motion', 'lucide-react', '@react-three/fiber', '@react-three/drei'],
+  },
+
+  // Pin Turbopack root to this project to avoid lockfile inference warnings
+  turbopack: {
+    root: path.resolve(__dirname),
   },
 };
 

@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Pixelify_Sans } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { PWAInstaller } from "@/components/PWAInstaller";
@@ -110,6 +111,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const isProd = process.env.NODE_ENV === "production";
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -229,6 +232,27 @@ export default function RootLayout({
             }`
           }}
         />
+        {!isProd ? (
+          <Script id="perf-measure-guard" strategy="beforeInteractive">
+            {`(function () {
+  if (typeof window === "undefined") return;
+  var perf = window.performance;
+  if (!perf || typeof perf.measure !== "function") return;
+  var originalMeasure = perf.measure.bind(perf);
+  perf.measure = function () {
+    try {
+      return originalMeasure.apply(perf, arguments);
+    } catch (err) {
+      var message = err && err.message ? String(err.message) : "";
+      if (message.indexOf("negative time stamp") !== -1) {
+        return undefined;
+      }
+      throw err;
+    }
+  };
+})();`}
+          </Script>
+        ) : null}
       </head>
       <body className={cn(
         "min-h-screen bg-background font-sans antialiased",
