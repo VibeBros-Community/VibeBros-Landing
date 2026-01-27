@@ -113,19 +113,19 @@ export function Footer() {
                                 </a>
                             </li>
                             <li>
-                                <a href="#" className="text-baltic-blue-300 hover:text-cerulean-400 transition-colors duration-200">
+                                <Link href="/docs" className="text-baltic-blue-300 hover:text-cerulean-400 transition-colors duration-200">
                                     Documentation
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="#" className="text-baltic-blue-300 hover:text-cerulean-400 transition-colors duration-200">
+                                <Link href="/blog" className="text-baltic-blue-300 hover:text-cerulean-400 transition-colors duration-200">
                                     Blog
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="#" className="text-baltic-blue-300 hover:text-cerulean-400 transition-colors duration-200">
+                                <Link href="/guidelines" className="text-baltic-blue-300 hover:text-cerulean-400 transition-colors duration-200">
                                     Guidelines
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>
@@ -162,15 +162,15 @@ export function Footer() {
                             <span>by the VibeBros community</span>
                         </div>
                         <div className="flex gap-5 sm:gap-6 text-xs sm:text-sm order-3">
-                            <a href="#" className="text-baltic-blue-400 hover:text-cerulean-400 transition-colors">
+                            <Link href="/privacy" className="text-baltic-blue-400 hover:text-cerulean-400 transition-colors">
                                 Privacy
-                            </a>
-                            <a href="#" className="text-baltic-blue-400 hover:text-cerulean-400 transition-colors">
+                            </Link>
+                            <Link href="/terms" className="text-baltic-blue-400 hover:text-cerulean-400 transition-colors">
                                 Terms
-                            </a>
-                            <a href="#" className="text-baltic-blue-400 hover:text-cerulean-400 transition-colors">
+                            </Link>
+                            <Link href="/code-of-conduct" className="text-baltic-blue-400 hover:text-cerulean-400 transition-colors">
                                 Code of Conduct
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
