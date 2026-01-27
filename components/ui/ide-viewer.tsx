@@ -42,7 +42,7 @@ export const IdeViewer = ({ projects }: IdeViewerProps) => {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row h-[500px]">
+      <div className="flex flex-col md:flex-row h-[540px]">
         {/* Sidebar / Explorer */}
         <div className="w-full md:w-64 bg-[#0d1117] border-r border-baltic-blue-800 flex flex-col">
           <div className="p-2 text-xs font-bold text-baltic-blue-300 uppercase tracking-wider flex items-center gap-1">
