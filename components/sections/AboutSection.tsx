@@ -49,15 +49,39 @@ export const AboutSection = memo(function AboutSection() {
                                 VIBEBROS?
                             </span>
                         </h2>
-                        <p className="text-lg text-baltic-blue-200 mb-6 leading-relaxed">
-                            VibeBros is more than a community—it's a movement of builders, creators,
-                            and dreamers who code with passion and purpose.
+                        <p className="text-lg text-baltic-blue-200 mb-4 leading-relaxed">
+                            VibeBros is more than a community—it&apos;s a movement of builders, creators,
+                            and dreamers who code with passion and purpose. Since our founding, we&apos;ve
+                            grown to over 250+ active members across the globe.
                         </p>
-                        <p className="text-lg text-baltic-blue-300 leading-relaxed">
+                        <p className="text-lg text-baltic-blue-300 mb-4 leading-relaxed">
                             We believe the best code is written in flow state. Through live coding sessions,
-                            collaborative projects, and a vibrant Discord community, we're redefining what
-                            it means to be a developer in the modern era.
+                            collaborative projects, and a vibrant Discord community, we&apos;re redefining what
+                            it means to be a developer in the modern era. Our members have shipped over 50+
+                            projects, from Web3 dApps to full-stack applications.
                         </p>
+                        <p className="text-base text-baltic-blue-400 leading-relaxed">
+                            Join us for weekly hackathons, daily coding sessions, Web3 workshops, and 24/7
+                            community support. Whether you&apos;re a beginner learning your first language or a
+                            seasoned developer exploring new technologies, VibeBros is your home for growth,
+                            collaboration, and innovation.
+                        </p>
+
+                        {/* Stats */}
+                        <div className="grid grid-cols-3 gap-4 mt-8 pt-8 border-t border-baltic-blue-800">
+                            <div>
+                                <div className="text-3xl font-black text-cerulean-400">250+</div>
+                                <div className="text-sm text-baltic-blue-400">Active Members</div>
+                            </div>
+                            <div>
+                                <div className="text-3xl font-black text-cerulean-400">50+</div>
+                                <div className="text-sm text-baltic-blue-400">Projects Shipped</div>
+                            </div>
+                            <div>
+                                <div className="text-3xl font-black text-cerulean-400">24/7</div>
+                                <div className="text-sm text-baltic-blue-400">Community Support</div>
+                            </div>
+                        </div>
                     </motion.div>
 
                     {/* Right: Feature Grid */}

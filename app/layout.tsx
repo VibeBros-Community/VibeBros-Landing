@@ -218,6 +218,12 @@ export default function RootLayout({
                   "position": 5,
                   "name": "Team",
                   "item": "${siteUrl}#team"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 6,
+                  "name": "FAQ",
+                  "item": "${siteUrl}#faq"
                 }
               ]
             }`

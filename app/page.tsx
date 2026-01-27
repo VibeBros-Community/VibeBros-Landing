@@ -4,6 +4,7 @@ import { AboutSection } from '@/components/sections/AboutSection';
 import { ProjectsSection } from '@/components/sections/ProjectsSection';
 import { EventsSection } from '@/components/sections/EventsSection';
 import { TeamSection } from '@/components/sections/TeamSection';
+import { FAQSection } from '@/components/sections/FAQSection';
 import { Footer } from '@/components/sections/Footer';
 import StarfieldBackground from '@/components/scene/StarfieldBackground';
 
@@ -20,6 +21,7 @@ export default function Home() {
         <ProjectsSection />
         <EventsSection />
         <TeamSection />
+        <FAQSection />
         <Footer />
       </div>
     </main>

@@ -36,7 +36,7 @@ export function Navbar() {
         };
     }, [isMobileMenuOpen]);
 
-    const menuItems = ["About", "Projects", "Events", "Team"];
+    const menuItems = ["About", "Projects", "Events", "Team", "FAQ"];
 
     return (
         <>
