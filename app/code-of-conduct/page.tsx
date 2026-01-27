@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/sections/Footer";
 import StarfieldBackground from "@/components/scene/StarfieldBackground";
+import { BackButton } from "@/components/ui/back-button";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://vibebros.dev';
 
@@ -22,6 +23,7 @@ export default function CodeOfConductPage() {
         <StarfieldBackground />
       </div>
       <div className="relative z-10">
+        <BackButton />
         <Navbar />
         <div className="pt-32 pb-20">
           <div className="container max-w-4xl">

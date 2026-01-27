@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/sections/Footer";
 import StarfieldBackground from "@/components/scene/StarfieldBackground";
+import { BackButton } from "@/components/ui/back-button";
 
 export const metadata: Metadata = {
   title: "Terms of Service - VibeBros",
@@ -15,6 +16,7 @@ export default function TermsPage() {
         <StarfieldBackground />
       </div>
       <div className="relative z-10">
+        <BackButton />
         <Navbar />
         <div className="pt-32 pb-20">
           <div className="container max-w-4xl">

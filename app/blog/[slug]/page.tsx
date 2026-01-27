@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/sections/Footer";
 import StarfieldBackground from "@/components/scene/StarfieldBackground";
+import { BackButton } from "@/components/ui/back-button";
 
 // This would typically come from a CMS or database
 const blogPosts: Record<string, any> = {
@@ -71,6 +72,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         <StarfieldBackground />
       </div>
       <div className="relative z-10">
+        <BackButton />
         <Navbar />
         <article className="pt-32 pb-20">
           <div className="container max-w-4xl">
