@@ -1,7 +1,7 @@
 ---
 title: "How VibeBros Grew to 250+ Members in 6 Months"
 date: "2026-01-18"
-author: "Willian"
+author: "William"
 readTime: "10 min read"
 category: "Community"
 excerpt: "The story behind building a thriving developer community from scratch."

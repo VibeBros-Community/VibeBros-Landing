@@ -1,7 +1,7 @@
 ---
 title: "Building Your First Web3 dApp: A Complete Guide"
 date: "2026-01-25"
-author: "Willian"
+author: "William"
 readTime: "12 min read"
 category: "Web3"
 excerpt: "Learn how to build a decentralized application from scratch using Solidity, Ethereum, and React."

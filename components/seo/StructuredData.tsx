@@ -93,7 +93,7 @@ const teamSchemas = [
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Willian",
+    "name": "William",
     "jobTitle": "Founder & Lead Vibe Architect",
     "description": "Full-stack developer with a passion for building communities.",
     "worksFor": { "@type": "Organization", "name": "VibeBros" },

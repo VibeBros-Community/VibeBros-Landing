@@ -64,7 +64,7 @@ Each event includes:
 - Event status and attendance mode
 
 **e) Person Schemas (4 team members)**
-- Willian (Founder & Lead Vibe Architect)
+- William (Founder & Lead Vibe Architect)
 - Jesse Pinkman (Community Lead & Designer)
 - Max (Head of Content & Streams)
 - J35 (DevOps & Infrastructure)

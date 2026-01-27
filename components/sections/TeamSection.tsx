@@ -6,7 +6,7 @@ import { AccordionTeam } from "@/components/ui/accordion-team";
 
 const team = [
     {
-        name: "Willian",
+        name: "William",
         role: "Founder & Lead Vibe Architect",
         bio: "Full-stack developer with a passion for building communities. 10+ years coding to lo-fi beats.",
         avatar: "W",
