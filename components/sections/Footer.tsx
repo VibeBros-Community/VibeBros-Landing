@@ -65,7 +65,7 @@ export function Footer() {
                                 <Twitter className="h-5 w-5" />
                             </a>
                             <a
-                                href="https://youtube.com/@vibebros"
+                                href="https://www.youtube.com/@VibeBrosDev"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="p-3 rounded-full bg-baltic-blue-800/50 text-baltic-blue-300 hover:bg-cerulean-500/20 hover:text-cerulean-400 transition-all duration-200 hover:scale-110 will-change-transform"
