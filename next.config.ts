@@ -5,6 +5,9 @@ const nextConfig: NextConfig = {
   // Enable React compiler for better performance
   reactStrictMode: true,
 
+  // Output standalone build
+  output: 'standalone',
+
   // Optimize images
   images: {
     formats: ['image/avif', 'image/webp'],
